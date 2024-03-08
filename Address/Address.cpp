@@ -28,34 +28,33 @@ Program #2 Instructions:
 3. Name the project: Address.cpp
 */
 
+
 #include "stdafx.h"
 #include <iostream>
 #include <string>
 #include <array>
 
-using namespace std;
 
 int main()
 {
 	char aChar = 'Z';
-	string aString = "This is a string.";
+	std::string aString = "This is a string.";
 	int aInts[5] = { 1, 2, 3, 4, 5 };
 	int aInt = 34;
 	double aDouble = 3.1415;
 
-	cout << "Char has memory address " << static_cast<void *>(&aChar) << endl;
-	cout << "String has memory address " << &aString << endl;
+	std::cout << std::endl;
+	std::cout << "Char has memory address " << static_cast<void *>(&aChar) << std::endl;
+	std::cout << "String has memory address " << &aString << std::endl;
 	
-	cout << "Array has memory address " << &aInts << endl;
+	std::cout << "Array has memory address " << &aInts << std::endl;
 	for (int i = 0; i < 5; i++) {
-		cout << "Array[" << i << "] has memory address " << &aInts[i] << endl;
+		std::cout << "Array[" << i << "] has memory address " << &aInts[i] << std::endl;
 	}
 
-	cout << "Integer has memory address " << &aInt << endl;
-	cout << "Double has memory address " << &aDouble << endl;
+	std::cout << "Integer has memory address " << &aInt << std::endl;
+	std::cout << "Double has memory address " << &aDouble << std::endl;
+	std::cout << std::endl;
 
-	cout << endl;
-	system("pause");
 	return 0;
 }
-
